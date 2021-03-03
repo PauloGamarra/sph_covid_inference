@@ -1,7 +1,7 @@
 # sph_covid_inference
 Inference script for the spherical approach for CT COVID classification
 
-Keras .h5 model can be downloaded [here](https://drive.google.com/file/d/1uUltQDHip_cFHCofhQYaIz1Ns3vF3kqY/view?usp=sharing)
+Keras .h5 model can be downloaded [here](https://drive.google.com/file/d/10GTg2jPILvCbQTbgv-wHVAmbJsn1ztWz/view?usp=sharing)
 
 For inference, run 
 
