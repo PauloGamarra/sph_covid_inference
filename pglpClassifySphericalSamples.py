@@ -16,6 +16,11 @@ ct_shape = (256, 512, 4)
 samples_dir = sys.argv[1]
 output_file = sys.argv[2]
 
+model_filename = 'ct_classifier.h5'
+
+if len(sys.argv) > 3:
+    model_filename = sys.argv[3]
+
 
 sample_files = [os.path.join(samples_dir, file) for file in os.listdir(samples_dir) if file.endswith('.npy')]
 
@@ -45,7 +50,7 @@ for index, row in samples_df.iterrows():
         x[index] = np.load(row['file'])[:,:,[1,3]]
 
 
-model = tf.keras.models.load_model('ct_classifier.h5')
+model = tf.keras.models.load_model(model_filename)
 
 y_pred = model.predict(x)
 y_pred = y_pred[:, 0]
