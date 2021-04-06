@@ -24,6 +24,8 @@ if len(sys.argv) > 3:
 
 sample_files = [os.path.join(samples_dir, file) for file in os.listdir(samples_dir) if file.endswith('.npy')]
 
+if not sample_files:
+    raise ValueError("No valid files found on input dir")
 
 samples_df = pd.DataFrame()
 samples_df['file'] = sample_files
